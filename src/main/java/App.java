@@ -15,7 +15,7 @@ public class App {
   public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
     // instructions:
     //  1) add input file to the src/main/resources and save it as day{2 digit zero-padded day}-{part number}.txt
-    //      example for day 1: day01-1.txt for part 1 and day01-2.txt for part 2
+    //      example for day 1: day01-1.txt for part 1 and day01-2.txt for part 2 when you unlock part 2
     //  2) create a new Day implementation in /solutions with the class name Day{2 digit zero-padded day}.java
     //      example for day 1: Day01.java
     //  3) update the integer below to the correct day number
