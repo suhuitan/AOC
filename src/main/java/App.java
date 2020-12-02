@@ -15,24 +15,24 @@ public class App {
   public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
     // instructions:
     //  1) add input file to the src/main/resources and save it as day{2 digit zero-padded day}-{part number}.txt
-    //      example for day 1: day01-1.txt for part 1 and day01-2.txt for part 2 when you unlock part 2
+    //      example for day 1: day01.txt
     //  2) create a new Day implementation in /solutions with the class name Day{2 digit zero-padded day}.java
     //      example for day 1: Day01.java
     //  3) update the integer below to the correct day number
     //  4) implement and run
 
     // CHANGE ME EVERYDAY!
-    int day = 1;
+    int day = 2;
 
     // you don't really need to touch anything else after this
     Day solution = (Day) instantiate(day);
 
     System.out.println("Solution for part 1:");
-    List<String> part1Input = loadInput(day, 1);
+    List<String> part1Input = loadInput(day);
     System.out.println(solution.part1(part1Input));
 
     System.out.println("\nSolution for part 2:");
-    List<String> part2Input = loadInput(day, 2);
+    List<String> part2Input = loadInput(day);
     System.out.println(solution.part2(part2Input));
   }
 
@@ -45,8 +45,8 @@ public class App {
     return clazz.newInstance();
   }
 
-  private static List<String> loadInput(int day, int part) {
-    String fileName = String.format("day%02d-%d.txt", day, part);
+  private static List<String> loadInput(int day) {
+    String fileName = String.format("day%02d.txt", day);
 
     InputStream systemResourceAsStream = ClassLoader.getSystemResourceAsStream(fileName);
 
