@@ -22,7 +22,7 @@ public class App {
     //  4) implement and run
 
     // CHANGE ME EVERYDAY!
-    int day = 2;
+    int day = 3;
 
     // you don't really need to touch anything else after this
     Day solution = (Day) instantiate(day);
@@ -45,7 +45,7 @@ public class App {
     return clazz.newInstance();
   }
 
-  private static List<String> loadInput(int day) {
+  public static List<String> loadInput(int day) {
     String fileName = String.format("day%02d.txt", day);
 
     InputStream systemResourceAsStream = ClassLoader.getSystemResourceAsStream(fileName);
