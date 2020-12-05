@@ -22,13 +22,22 @@ public class Day05 implements Day {
   }
 
   int findSeatNumber(String input) {
-    String rowInput = input.substring(0, 7  );
+    String rowInput = input.substring(0, 7);
     String colInput = input.substring(7);
-    int rowNumber = findTarget(rowInput, 0, NO_OF_ROWS - 1);
-    int colNumber = findTarget(colInput, 0, NO_OF_COL - 1);
+    //    int rowNumber = findTarget(rowInput, 0, NO_OF_ROWS - 1);
+    //    int colNumber = findTarget(colInput, 0, NO_OF_COL - 1);
+    int rowNumber = findTarget(rowInput);
+    int colNumber = findTarget(colInput);
     return rowNumber * NO_OF_COL + colNumber;
   }
 
+  int findTarget(String input) {
+    input = input.replaceAll("[FL]", "0");
+    input = input.replaceAll("[BR]", "1");
+    return Integer.parseInt(input, 2);
+  }
+
+  // first solution - before i realized it was just binary
   int findTarget(String input, int min, int max) {
     if (input.isEmpty()) {
       return min;
