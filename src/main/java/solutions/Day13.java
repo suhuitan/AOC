@@ -45,6 +45,7 @@ public class Day13 implements Day {
       i++;
     }
 
+    // something something chinese remainder theorem: http://homepages.math.uic.edu/~leon/mcs425-s08/handouts/chinese_remainder.pdf
     Long product = moduli.stream()
         .reduce(1L, (a, b) -> a * b);
 
@@ -67,6 +68,7 @@ public class Day13 implements Day {
     return String.valueOf(result % product);
   }
 
+  // find x where (a * x) % m == 1
   private Long findModularInverse(Long a, Long m) {
     a = a % m;
     for (long x = 1; x < m; x++) {
