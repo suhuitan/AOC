@@ -1,15 +1,13 @@
 package solutions;
 
-import java.util.Arrays;
-import java.util.List;
-
+import java.util.Collections;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Day01Test {
-  Day underTest;
+  Day01 underTest;
 
   @BeforeMethod
   public void setup() {
@@ -18,25 +16,7 @@ public class Day01Test {
 
   @Test
   public void testPart1() {
-    List<String> integers = Arrays.asList("1721",
-        "979",
-        "366",
-        "299",
-        "675",
-        "1456");
-    String output = underTest.part1(integers);
-    Assert.assertEquals(output, "514579");
-  }
-
-  @Test
-  public void testPart2() {
-    List<String> integers = Arrays.asList("1721",
-        "979",
-        "366",
-        "299",
-        "675",
-        "1456");
-    String output = underTest.part2(integers);
-    Assert.assertEquals(output, "241861950");
+    String result = underTest.part1(Collections.emptyList());
+    Assert.assertEquals(result, null);
   }
 }

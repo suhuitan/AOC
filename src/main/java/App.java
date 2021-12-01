@@ -8,7 +8,7 @@ import java.io.UncheckedIOException;
 import java.util.Collections;
 import java.util.List;
 
-import solutions.Day;
+import utils.Day;
 
 public class App {
 
@@ -16,13 +16,13 @@ public class App {
     // instructions:
     //  1) add input file to the src/main/resources and save it as day{2 digit zero-padded day}-{part number}.txt
     //      example for day 1: day01.txt
-    //  2) create a new Day implementation in /solutions with the class name Day{2 digit zero-padded day}.java
+    //  2) create a new utils.Day implementation in /solutions with the class name utils.Day{2 digit zero-padded day}.java
     //      example for day 1: Day01.java
     //  3) update the integer below to the correct day number
     //  4) implement and run
 
     // CHANGE ME EVERYDAY!
-    int day = 25;
+    int day = 1;
 
     // you don't really need to touch anything else after this
     Day solution = (Day) instantiate(day);
@@ -46,7 +46,7 @@ public class App {
   }
 
   public static List<String> loadInput(int day) {
-    String fileName = String.format("day%02d.txt", day);
+    String fileName = String.format("2021/day%02d.txt", day);
 
     InputStream systemResourceAsStream = ClassLoader.getSystemResourceAsStream(fileName);
 
