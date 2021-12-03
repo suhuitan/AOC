@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UncheckedIOException;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import utils.Day;
@@ -21,12 +23,13 @@ public class App {
     //  3) update the integer below to the correct day number
     //  4) implement and run
 
-    // CHANGE ME EVERYDAY!
-    int day = 2;
+    int day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 
     // you don't really need to touch anything else after this
     Day solution = (Day) instantiate(day);
 
+    System.out.println("Day " + day);
+    System.out.println("================");
     System.out.println("Solution for part 1:");
     List<String> part1Input = loadInput(day);
     System.out.println(solution.part1(part1Input));
