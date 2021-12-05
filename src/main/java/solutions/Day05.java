@@ -74,6 +74,7 @@ public class Day05 implements Day {
       Pair<Integer, Integer> c1 = Pair.of(x1, y1);
       Pair<Integer, Integer> c2 = Pair.of(x2, y2);
 
+      // presort so it is always going in increasing order
       startCoord = c1.compareTo(c2) < 0 ? c1 : c2;
       endCoord = c1.compareTo(c2) < 0 ? c2: c1;
     }
