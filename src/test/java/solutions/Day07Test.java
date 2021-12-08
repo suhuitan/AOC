@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class Day07Test {
 
   private Day07 underTest;
-  private String input = "";
+  private String input = "16,1,2,0,4,2,7,1,2,14";
 
   @BeforeMethod
   public void setup() {
@@ -23,7 +23,7 @@ public class Day07Test {
     List<String> inputs = splitByNewLine(input);
     String result = underTest.part1(inputs);
 
-    Assert.assertEquals(result, null);
+    Assert.assertEquals(result, "37");
   }
 
   @Test
@@ -31,6 +31,6 @@ public class Day07Test {
     List<String> inputs = splitByNewLine(input);
     String result = underTest.part2(inputs);
 
-    Assert.assertEquals(result, null);
+    Assert.assertEquals(result, "168");
   }
 }
