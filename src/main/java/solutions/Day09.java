@@ -81,12 +81,7 @@ public class Day09 implements Day {
      if(arr[i][j] == 9) {
        return 0;
      }
-
-     if(arr[i][j] == -1) {
-       return 0;
-     }
-
-     arr[i][j] = -1;
+     arr[i][j] = 9;
      return countLowPortionsAround(arr, i - 1, j) + countLowPortionsAround(arr, i, j - 1) + countLowPortionsAround(arr, i, j + 1) + countLowPortionsAround(arr, i + 1, j) + 1;
   }
 }
