@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UncheckedIOException;
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -28,6 +30,7 @@ public class App {
     // you don't really need to touch anything else after this
     Day solution = (Day) instantiate(day);
 
+    Date date = Date.from(Instant.now());
     System.out.println("Day " + day);
     System.out.println("================");
     System.out.println("Solution for part 1:");
@@ -37,6 +40,10 @@ public class App {
     System.out.println("\nSolution for part 2:");
     List<String> part2Input = loadInput(day);
     System.out.println(solution.part2(part2Input));
+
+    Date after = Date.from(Instant.now());
+    System.out.println("---");
+    System.out.println("Time taken in ms: " + (after.getTime() - date.getTime()));
   }
 
   // Everything below is boilerplate
