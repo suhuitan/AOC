@@ -1,8 +1,10 @@
 package utils;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Coordinate {
+public class Coordinate implements Comparable<Coordinate> {
+
   int x;
   int y;
   int z;
@@ -45,5 +47,17 @@ public class Coordinate {
   @Override
   public int hashCode() {
     return Objects.hash(getX(), getY(), getZ());
+  }
+
+  @Override
+  public int compareTo(Coordinate o) {
+    int result = Integer.compare(x, o.x);
+    if (result == 0) {
+      result = Integer.compare(y, o.y);
+      if (result == 0) {
+        result = Integer.compare(z, o.z);
+      }
+    }
+    return result;
   }
 }
